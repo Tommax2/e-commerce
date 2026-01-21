@@ -1,42 +1,54 @@
-.hero{
+.hero {
     height: 100vh;
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    /* background-image: url('../../assets/logo.jpg'); */ /* Removed background image */
+    overflow: hidden;
 }
-.hero-left{
+
+.hero-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 20px;
-    padding-left: 180px;
-    height: 1.1;
+    padding-left: 120px;
+    line-height: 1.1;
+    animation: fadeInLeft 1s ease-out;
 }
-.hero-left h1{
-    font-size: 3.5rem;
-    font-weight: 600;
-    color: black; /* Changed text color to black */
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
-.hero-left p{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: black; /* Changed text color to black */
-}
-.jims-touch {
-    font-size: 2rem;
+
+.hero-left h1 {
+    font-size: 4rem;
     font-weight: 700;
-    color: #ff414f; /* Added new styles for Jim's Touch */
+    color: #171717;
+    margin: 0;
 }
+.hero-left p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #171717;
+    margin: 0;
+}
+
+.jims-touch {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ff414f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .product-description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    color: black; /* Added new styles for product description */
-    text-align: center;
-    max-width: 600px;
+    color: #5c5c5c;
+    max-width: 500px;
+    line-height: 1.6;
 }
 .hero-hand-icon{
     display: flex;
@@ -46,53 +58,76 @@
 .hero-hand-icon img{
     height: 50px;
 }
-.hero-latest-btn{
+.hero-latest-btn {
     display: flex;
-    gap: 20px;
     justify-content: center;
     align-items: center;
-    width: 310px;
-    height: 70px;
+    gap: 15px;
+    width: 280px;
+    height: 60px;
     border-radius: 75px;
     margin-top: 30px;
     background: #ff414f;
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.hero-latest-btn:hover {
+    transform: scale(1.05);
+    background: #e03a46;
+    box-shadow: 0 10px 20px rgba(255, 65, 79, 0.2);
+}
+
+.hero-latest-btn:active {
+    transform: scale(0.98);
 }
 
 /* Media Queries */
 @media (max-width: 1200px) {
     .hero-left {
-        padding-left: 100px;
+        padding-left: 80px;
     }
     .hero-left h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
     .hero-left p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px;
         height: auto;
-        padding: 20px;
     }
+
     .hero-left {
-        padding-left: 50px;
+        padding-left: 0;
+        align-items: center;
     }
+
     .hero-left h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
+
     .hero-left p {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
+
+    .product-description {
+        text-align: center;
+    }
+
     .hero-latest-btn {
-        width: 100%;
-        height: 50px;
-        font-size: 14px;
+        width: 250px;
+        height: 55px;
+        font-size: 18px;
     }
 }
 

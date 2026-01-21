@@ -2,23 +2,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px; /* Added padding */
-    text-align: center; /* Center text */
+    gap: 10px;
+    padding: 80px 0;
 }
 
 .popular h1 {
-    font-size: 2rem; /* Changed from 2.5rem to 2rem */
-    font-weight: 600;
     color: #171717;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.popular hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+    border: none;
+    margin-bottom: 50px;
 }
 
 .popular-items {
     display: flex;
-    gap: 20px;
-    justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Allow items to wrap */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .popular-items img {
@@ -51,44 +60,21 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
-    .popular {
-        height: auto;
+@media (max-width: 800px) {
+    .popular h1 {
+        font-size: 2.5rem;
+    }
+    .popular hr {
+        width: 120px;
+        height: 4px;
     }
     .popular-items {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .popular-items img {
-        height: 300px; /* Increase height for smaller screens */
-        border-radius: 20px; /* Add rounded edges */
-    }
-    .popular-item .price {
-        font-size: 0.9rem; /* Reduce font size for prices */
+        gap: 20px;
     }
 }
 
-/* Media query to reduce image size for screens smaller than 1200px */
-@media (max-width: 1200px) {
-    .popular-items img {
-        width: 200px;
-        max-width: 1200px; /* Changed from 1600px to 1200px */
-    }
-}
-
-/* Media query for screens smaller than 310px */
-@media (max-width: 310px) {
-    .popular-items img {
-        width: 150px;
-        max-width: 310px;
-    }
-    .popular-item {
-        width: 100%;
-    }
-    .popular {
-        padding: 10px;
-    }
+@media (max-width: 500px) {
     .popular h1 {
-        font-size: 150px; /* Reduce font size from 370px to 150px */
+        font-size: 2rem;
     }
 }

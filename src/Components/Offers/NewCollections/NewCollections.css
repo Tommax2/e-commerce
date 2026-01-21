@@ -2,63 +2,66 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px;
-  gap: 20px; /* Space between header and items */
-}
-
-.new-collections-left {
-  width: 60%;
+  gap: 10px;
+  padding: 80px 0;
 }
 
 .new-collection-header {
-  text-align: center; /* Center align text */
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .new-collection-header h2 {
-  font-size: 24px;
+  color: #171717;
+  font-size: 3.5rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .new-collection-header p {
-  font-size: 16px;
+  font-size: 1.2rem;
   color: #555;
+  max-width: 600px;
 }
 
 .new-collections-items {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  gap: 20px; /* Space between items */
-  justify-content: center; /* Center items horizontally */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 20px;
 }
 
 .new-collection-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fff;
-  transition: transform 0.3s ease; /* Added transition for smooth effect */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  padding-bottom: 15px;
+  width: 280px;
 }
 
 .new-collection-item:hover {
-  transform: scale(1.05); /* Added hover effect */
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .new-collection-item img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.new-collection-item:hover img {
+  transform: scale(1.05);
 }
 
 .new-collection-item p {
-  font-size: 18px;
-  margin: 0;
-  text-align: center;
+  margin: 15px 15px 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #374151;
+  text-align: left;
 }
 
 .item-prices {

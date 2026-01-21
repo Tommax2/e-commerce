@@ -1,102 +1,115 @@
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 40px; /* Add margin-bottom */
+  background-color: #1a1a1a;
+  color: #f3f3f3;
+  padding: 80px 60px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
-.footer > div {
-  margin-bottom: 20px; /* Add spacing between divs */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .footer-logo h1 {
-  font-size: 24px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff414f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin: 0;
 }
 
 .footer-logo p {
-  font-size: 14px;
-  margin: 5px 0 20px;
+  font-size: 1.1rem;
+  color: #b3b3b3;
+  max-width: 400px;
+  text-align: center;
 }
 
-.footer-links h3,
-.footer-social h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.footer-links ul,
-.footer-social ul {
+.footer-links ul {
+  display: flex;
   list-style: none;
+  gap: 40px;
   padding: 0;
-  display: flex; /* Add flex display */
-  justify-content: center; /* Center the items */
-  gap: 15px; /* Add space between items */
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-.footer-links li,
-.footer-social li {
-  margin: 5px 0;
+.footer-links li {
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.footer-links li:hover,
-.footer-social li:hover {
-  text-decoration: underline;
+.footer-links li:hover {
+  color: #ff414f;
 }
 
-.footer-social li {
-  display: inline-block;
-  margin: 0 10px;
+.footer-social {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-social-icon {
+  padding: 12px;
+  background: #2b2b2b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-social-icon:hover {
+  background: #ff414f;
+  transform: translateY(-5px);
 }
 
 .footer-social box-icon {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   fill: #fff;
 }
 
-.footer-social box-icon:hover {
-  fill: #1da1f2; /* Change color on hover */
-}
-
 hr {
-  border: 0;
-  border-top: 1px solid #444;
-  margin: 20px 0;
+  width: 80%;
+  border: none;
+  height: 1px;
+  background: #333;
+  margin: 0;
 }
 
 .footer-copyright {
-  font-size: 12px;
-  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #808080;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .footer {
-    padding: 15px;
+    padding: 60px 20px 30px;
+    gap: 30px;
+  }
+
+  .footer-links ul {
+    gap: 20px;
+    font-size: 1rem;
   }
 
   .footer-logo h1 {
-    font-size: 20px;
+    font-size: 2rem;
   }
+}
 
-  .footer-logo p {
-    font-size: 12px;
-  }
-
-  .footer-links h3,
-  .footer-social h3 {
-    font-size: 16px;
-  }
-
-  .footer-links ul,
-  .footer-social ul {
+@media (max-width: 500px) {
+  .footer-links ul {
     flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer-social li {
-    margin: 5px 0;
+    align-items: center;
+    gap: 15px;
   }
 }
 
@@ -147,4 +160,3 @@ hr {
     gap: 3px;
   }
 }
-
